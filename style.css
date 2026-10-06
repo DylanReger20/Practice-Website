@@ -7,6 +7,14 @@ body {
 .burger{
     background-color: mediumpurple;
 }
+.cheese{
+    font-size: 80px;
+}
+#start{
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+}
 li{
     color: black;
     font-size : 25px;
@@ -26,8 +34,8 @@ ul>li:first-child{
 a:visited{
     color: beige;
 }
-li hover{
-    background-color: navy;
+li:hover{
+    background-color: whitesmoke;
 }
 div{
     li{

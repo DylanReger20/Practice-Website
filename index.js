@@ -1,12 +1,23 @@
 function clicked() {
-    document.title = "Hello";
+    document.title = document.querySelector("input").value;
 }
-function loading(){
-    if(localStorage.getItem("loVal")==localStorage.getItem("loVal"));
+function local(){
+    let x = JSON.parse(localStorage.getItem("local"))+1;
+    localStorage.setItem("local",x);
+    document.querySelector("#local").innerHTML=x;
 }
-function add(){
-    localStorage.setItem("loVal", localStorage.getItem("loVal")+1);
+function session(){
+    let x = JSON.parse(sessionStorage.getItem("session"))+1;
+    sessionStorage.setItem("session",x);
+    document.querySelector("#session").innerHTML=x;
 }
-function remove(){
-    sessionStorage.setItem("seVal", sessionStorage.getItem("seVal")+1);
+function update(){
+    if(!localStorage.getItem("local")){
+        localStorage.setItem("local",0);
+    }
+    if(!sessionStorage.getItem("session")){
+        sessionStorage.setItem("session",0);
+    }
+    document.querySelector("#session").innerHTML=sessionStorage.getItem("session");
+    document.querySelector("#local").innerHTML=localStorage.getItem("local");
 }
